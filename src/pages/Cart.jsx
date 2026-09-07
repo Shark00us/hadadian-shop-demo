@@ -65,16 +65,14 @@ function Cart()
                                     className="cart-item-image"
                                 >
                                     <img
-                                        src={`${import.meta.env.BASE_URL}${product.image}`}
+                                        src={`${import.meta.env.BASE_URL}${item.image}`}
                                         alt={item.title}
                                     />
                                 </Link>
 
                                 {/* اطلاعات محصول */}
                                 <div className="cart-item-content">
-                                    <Link
-                                        to={`/product/${item.id}`}
-                                    >
+                                    <Link to={`/product/${item.id}`}>
                                         <h2>
                                             {item.title}
                                         </h2>
