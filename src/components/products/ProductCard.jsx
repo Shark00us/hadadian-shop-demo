@@ -16,7 +16,7 @@ function ProductCard({ product, onAddToCart })
                 className="product-card-image"
             >
                 <img
-                    src={product.image}
+                    src={`${import.meta.env.BASE_URL}${product.image}`}
                     alt={product.title}
                 />
             </Link>
