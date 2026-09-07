@@ -8,7 +8,7 @@
         "pages": 120,
         "file": "PDF",
         "size": "15 مگابایت",
-        "image": "/images/products/math.jpg",
+        "image": "images/products/math.jpg",
         "description": "جزوه جامع ریاضی شامل مباحث مهم و نکات آموزشی مورد نیاز برای مطالعه و آمادگی آزمون."
     },
     {
@@ -20,7 +20,7 @@
         "pages": 95,
         "file": "PDF",
         "size": "12 مگابایت",
-        "image": "/images/products/physics.jpg",
+        "image": "images/products/physics.jpg",
         "description": "مجموعه آموزشی فیزیک دوازدهم شامل درسنامه، نکات مهم و تمرین‌های منتخب."
     },
     {
@@ -32,7 +32,7 @@
         "pages": 110,
         "file": "PDF",
         "size": "14 مگابایت",
-        "image": "/images/products/chemistry.jpg",
+        "image": "images/products/chemistry.jpg",
         "description": "جزوه جامع شیمی با تمرکز بر مفاهیم اصلی، نکات تستی و مباحث پرتکرار."
     }
 ]
