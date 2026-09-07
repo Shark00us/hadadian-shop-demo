@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "name": "ریاضی",
+        "slug": "math",
+        "description": "جزوات آموزشی درس ریاضی"
+    },
+    {
+        "id": 2,
+        "name": "فیزیک",
+        "slug": "physics",
+        "description": "جزوات آموزشی درس فیزیک"
+    },
+    {
+        "id": 3,
+        "name": "شیمی",
+        "slug": "chemistry",
+        "description": "جزوات آموزشی درس شیمی"
+    }
+]

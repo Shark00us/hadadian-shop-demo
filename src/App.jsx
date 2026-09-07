@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 
 import Home from "./pages/Home.jsx";
 import Shop from "./pages/Shop.jsx";
@@ -16,24 +16,74 @@ import { CartProvider } from "./context/CartContext.jsx";
 function App()
 {
     return (
-        <BrowserRouter basename={import.meta.env.BASE_URL}>
+        <HashRouter>
+            {/* فراهم کردن وضعیت سبد خرید برای تمام صفحات */}
             <CartProvider>
                 <Layout>
                     <Routes>
-                        <Route path="/" element={<Home />} />
-                        <Route path="/shop" element={<Shop />} />
-                        <Route path="/product/:id" element={<ProductDetails />} />
-                        <Route path="/cart" element={<Cart />} />
-                        <Route path="/checkout" element={<Checkout />} />
-                        <Route path="/login" element={<Login />} />
-                        <Route path="/register" element={<Register />} />
-                        <Route path="/account" element={<Account />} />
-                        <Route path="/orders" element={<Orders />} />
-                        <Route path="*" element={<Home />} />
+                        {/* صفحه اصلی */}
+                        <Route
+                            path="/"
+                            element={<Home />}
+                        />
+
+                        {/* فروشگاه */}
+                        <Route
+                            path="/shop"
+                            element={<Shop />}
+                        />
+
+                        {/* جزئیات محصول */}
+                        <Route
+                            path="/product/:id"
+                            element={<ProductDetails />}
+                        />
+
+                        {/* سبد خرید */}
+                        <Route
+                            path="/cart"
+                            element={<Cart />}
+                        />
+
+                        {/* ثبت سفارش */}
+                        <Route
+                            path="/checkout"
+                            element={<Checkout />}
+                        />
+
+                        {/* ورود */}
+                        <Route
+                            path="/login"
+                            element={<Login />}
+                        />
+
+                        {/* ثبت‌نام */}
+                        <Route
+                            path="/register"
+                            element={<Register />}
+                        />
+
+                        {/* حساب کاربری */}
+                        <Route
+                            path="/account"
+                            element={<Account />}
+                        />
+
+                        {/* سفارش‌ها */}
+                        <Route
+                            path="/orders"
+                            element={<Orders />}
+                        />
+
+                        {/* مسیر نامعتبر */}
+                        <Route
+                            path="*"
+                            element={<Home />}
+                        />
                     </Routes>
                 </Layout>
             </CartProvider>
-        </BrowserRouter>
+        </HashRouter>
     );
 }
 
