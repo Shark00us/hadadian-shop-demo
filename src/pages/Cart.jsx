@@ -65,7 +65,7 @@ function Cart()
                                     className="cart-item-image"
                                 >
                                     <img
-                                        src={item.image}
+                                        src={`${import.meta.env.BASE_URL}${product.image}`}
                                         alt={item.title}
                                     />
                                 </Link>

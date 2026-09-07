@@ -12,11 +12,11 @@ function Navbar()
                 >
 <img
     src={`${import.meta.env.BASE_URL}images/logo.png`}
-    alt="فروشگاه جزوات استاد حدادیان نژاد یوسفی"
+    alt="فروشگاه جزوات سقازاده"
 />
 
                     <span>
-                        فروشگاه جزوات استاد حدادیان نژاد یوسفی
+                        فروشگاه جزوات سقازاده
                     </span>
                 </Link>
 
