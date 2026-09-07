@@ -1,0 +1,75 @@
+/* تنظیمات پایه صفحه */
+*
+{
+    box-sizing: border-box;
+}
+
+/* حذف فاصله پیش‌فرض مرورگر */
+html,
+body,
+#root
+{
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+}
+
+/* تنظیمات کلی بدنه سایت */
+body
+{
+    background-color: #ffffff;
+    color: #222222;
+
+    font-family:
+        "Vazirmatn",
+        Tahoma,
+        Arial,
+        sans-serif;
+
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+/* حذف ظاهر پیش‌فرض لینک‌ها */
+a
+{
+    color: inherit;
+    text-decoration: none;
+}
+
+/* تصاویر نباید از محدوده والد خارج شوند */
+img
+{
+    display: block;
+    max-width: 100%;
+}
+
+/* دکمه‌ها و فیلدهای فرم از فونت سایت استفاده کنند */
+button,
+input,
+select,
+textarea
+{
+    font: inherit;
+}
+
+/* جلوگیری از تغییر اندازه افقی textarea */
+textarea
+{
+    resize: vertical;
+}
+
+/* تنظیم ظاهر دکمه */
+button
+{
+    cursor: pointer;
+}
+
+/* حذف حاشیه پیش‌فرض لیست‌ها */
+ul,
+ol
+{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}

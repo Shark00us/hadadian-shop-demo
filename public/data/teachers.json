@@ -1,0 +1,14 @@
+[
+    {
+        "id": 1,
+        "name": "استاد حدادیان نژاد",
+        "description": "مدرس و تهیه‌کننده جزوات آموزشی",
+        "image": "/images/logo.png"
+    },
+    {
+        "id": 2,
+        "name": "استاد یوسفی",
+        "description": "مدرس و تهیه‌کننده جزوات آموزشی",
+        "image": "/images/logo.png"
+    }
+]

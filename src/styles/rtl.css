@@ -1,0 +1,28 @@
+/* تنظیم جهت کلی سایت برای زبان فارسی */
+html
+{
+    direction: rtl;
+}
+
+/* جهت متن‌ها در تمام بخش‌های سایت */
+body
+{
+    direction: rtl;
+    text-align: right;
+}
+
+/* عناصر فرم نیز از جهت راست به چپ استفاده می‌کنند */
+input,
+textarea,
+select
+{
+    direction: rtl;
+    text-align: right;
+}
+
+/* اعداد و متن‌هایی که نیاز به جهت چپ به راست دارند */
+.ltr
+{
+    direction: ltr;
+    text-align: left;
+}

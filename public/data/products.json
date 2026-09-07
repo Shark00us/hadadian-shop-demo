@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "title": "جزوه ریاضی جامع کنکور",
+        "teacher": "استاد حدادیان نژاد",
+        "category": "ریاضی",
+        "price": 250000,
+        "pages": 120,
+        "file": "PDF",
+        "size": "15 مگابایت",
+        "image": "/images/products/math.jpg",
+        "description": "جزوه جامع ریاضی شامل مباحث مهم و نکات آموزشی مورد نیاز برای مطالعه و آمادگی آزمون."
+    },
+    {
+        "id": 2,
+        "title": "جزوه فیزیک دوازدهم",
+        "teacher": "استاد حدادیان نژاد",
+        "category": "فیزیک",
+        "price": 180000,
+        "pages": 95,
+        "file": "PDF",
+        "size": "12 مگابایت",
+        "image": "/images/products/physics.jpg",
+        "description": "مجموعه آموزشی فیزیک دوازدهم شامل درسنامه، نکات مهم و تمرین‌های منتخب."
+    },
+    {
+        "id": 3,
+        "title": "جزوه شیمی جامع",
+        "teacher": "استاد یوسفی",
+        "category": "شیمی",
+        "price": 220000,
+        "pages": 110,
+        "file": "PDF",
+        "size": "14 مگابایت",
+        "image": "/images/products/chemistry.jpg",
+        "description": "جزوه جامع شیمی با تمرکز بر مفاهیم اصلی، نکات تستی و مباحث پرتکرار."
+    }
+]
