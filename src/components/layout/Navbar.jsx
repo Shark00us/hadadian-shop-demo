@@ -10,10 +10,10 @@ function Navbar()
                     to="/"
                     className="navbar-logo"
                 >
-                    <img
-                        src="/images/logo.png"
-                        alt="فروشگاه جزوات استاد حدادیان نژاد یوسفی"
-                    />
+<img
+    src={`${import.meta.env.BASE_URL}images/logo.png`}
+    alt="فروشگاه جزوات استاد حدادیان نژاد یوسفی"
+/>
 
                     <span>
                         فروشگاه جزوات استاد حدادیان نژاد یوسفی
