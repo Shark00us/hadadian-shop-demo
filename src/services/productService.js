@@ -1,5 +1,5 @@
 // آدرس فایل اطلاعات محصولات
-const PRODUCTS_URL = "/data/products.json";
+const PRODUCTS_URL = `${import.meta.env.BASE_URL}data/products.json`;
 
 // دریافت تمام محصولات
 export async function getProducts()
