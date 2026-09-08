@@ -12,7 +12,6 @@ function ProductDetails()
 {
 const { id } = useParams();
 
-```
 const [product, setProduct] = useState(null);
 const [loading, setLoading] = useState(true);
 
@@ -215,7 +214,6 @@ return (
         </section>
     </div>
 );
-```
 
 }
 

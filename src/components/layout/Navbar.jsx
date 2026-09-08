@@ -5,7 +5,6 @@ function Navbar()
 {
 const [user, setUser] = useState(null);
 
-```
 useEffect(() =>
 {
     // دریافت کاربر وارد شده از localStorage
@@ -39,7 +38,7 @@ useEffect(() =>
 
     loadUser();
 
-    // بررسی تغییرات کاربر در هنگام بازگشت به صفحه
+    // بررسی تغییرات کاربر در هنگام تغییر localStorage
     window.addEventListener(
         "storage",
         loadUser
@@ -117,7 +116,6 @@ return (
         </div>
     </header>
 );
-```
 
 }
 
