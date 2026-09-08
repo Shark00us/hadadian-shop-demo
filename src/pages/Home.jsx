@@ -14,7 +14,7 @@ useEffect(() =>
     {
         try
         {
-            // دریافت اطلاعات اساتید از فایل JSON
+            // دریافت اطلاعات اساتید از فایل JSONS
             const response = await fetch(
                 import.meta.env.BASE_URL + "data/teachers.json",
                 {
