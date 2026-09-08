@@ -2,10 +2,17 @@ import { Link } from "react-router-dom";
 
 function Footer()
 {
+    function openCreatorToast()
+    {
+        // ارسال رویداد برای باز کردن پیام معرفی سازنده
+        window.dispatchEvent(
+            new CustomEvent("open-creator-toast")
+        );
+    }
+
     return (
         <footer className="footer">
             <div className="footer-container">
-                {/* معرفی کوتاه فروشگاه */}
                 <div className="footer-section">
                     <h3>
                         فروشگاه جزوات سقازاده
@@ -16,7 +23,6 @@ function Footer()
                     </p>
                 </div>
 
-                {/* لینک‌های سریع */}
                 <div className="footer-section">
                     <h4>
                         دسترسی سریع
@@ -33,9 +39,16 @@ function Footer()
                     <Link to="/cart">
                         سبد خرید
                     </Link>
+
+                    <button
+                        type="button"
+                        className="footer-about-button"
+                        onClick={openCreatorToast}
+                    >
+                        درباره من
+                    </button>
                 </div>
 
-                {/* اطلاعات تماس */}
                 <div className="footer-section">
                     <h4>
                         ارتباط با ما
@@ -47,7 +60,6 @@ function Footer()
                 </div>
             </div>
 
-            {/* بخش کپی‌رایت */}
             <div className="footer-bottom">
                 <p>
                     تمامی حقوق این وب‌سایت محفوظ است.
