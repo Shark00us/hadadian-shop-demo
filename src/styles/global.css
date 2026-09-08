@@ -2290,21 +2290,143 @@ main
             1fr;
     }
 }
+/* =========================================================
+   اساتید
+   ========================================================= */
 
+.home-teachers
+{
+    margin-bottom: 48px;
+}
+
+.home-section-header
+{
+    margin-bottom: 20px;
+}
+
+.home-section-header h2
+{
+    margin-bottom: 6px;
+
+    font-size: 26px;
+}
+
+.home-section-header p
+{
+    margin-bottom: 0;
+
+    color: var(--color-text-light);
+
+    font-size: 14px;
+}
+
+.teacher-list
+{
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 20px;
+}
+
+.teacher-card
+{
+    display: flex;
+
+    align-items: center;
+
+    gap: 16px;
+
+    padding: 18px;
+
+    border: 1px solid var(--color-border);
+
+    border-radius: var(--radius-medium);
+
+    background: var(--color-surface);
+
+    box-shadow: var(--shadow-small);
+
+    transition:
+        transform var(--transition),
+        box-shadow var(--transition);
+}
+
+.teacher-card:hover
+{
+    transform: translateY(-3px);
+
+    box-shadow: var(--shadow-medium);
+}
+
+.teacher-image
+{
+    width: 78px;
+    height: 78px;
+
+    flex-shrink: 0;
+
+    overflow: hidden;
+
+    border-radius: 50%;
+
+    background: #f1f5f9;
+}
+
+.teacher-image img
+{
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.teacher-content
+{
+    min-width: 0;
+}
+
+.teacher-content h3
+{
+    margin-bottom: 4px;
+
+    font-size: 16px;
+}
+
+.teacher-content p
+{
+    margin-bottom: 0;
+
+    color: var(--color-text-light);
+
+    font-size: 12px;
+}
 /* =========================================================
    کاهش انیمیشن برای کاربرانی که آن را غیرفعال کرده‌اند
    ========================================================= */
 
 @media (prefers-reduced-motion: reduce)
 {
+    html
+    {
+        scroll-behavior: auto !important;
+    }
+
     *,
     *::before,
     *::after
     {
-        scroll-behavior: auto !important;
-
-        transition-duration: 0.01ms !important;
         animation-duration: 0.01ms !important;
         animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        transition-delay: 0s !important;
+    }
+}
+@media (max-width: 700px)
+{
+    .teacher-list
+    {
+        grid-template-columns: 1fr;
     }
 }
