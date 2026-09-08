@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function Footer()
 {
     return (
@@ -20,17 +22,17 @@ function Footer()
                         دسترسی سریع
                     </h4>
 
-                    <a href="/">
+                    <Link to="/">
                         صفحه اصلی
-                    </a>
+                    </Link>
 
-                    <a href="/shop">
+                    <Link to="/shop">
                         فروشگاه
-                    </a>
+                    </Link>
 
-                    <a href="/cart">
+                    <Link to="/cart">
                         سبد خرید
-                    </a>
+                    </Link>
                 </div>
 
                 {/* اطلاعات تماس */}
