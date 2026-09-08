@@ -16,7 +16,7 @@ useEffect(() =>
         {
             // دریافت اطلاعات اساتید از فایل JSON
             const response = await fetch(
-                `${import.meta.env.BASE_URL}data/teachers.json`,
+                import.meta.env.BASE_URL + "data/teachers.json",
                 {
                     cache: "no-store"
                 }
@@ -25,7 +25,7 @@ useEffect(() =>
             if (!response.ok)
             {
                 throw new Error(
-                    `خطا در دریافت اساتید: ${response.status}`
+                    "خطا در دریافت اساتید: " + response.status
                 );
             }
 
@@ -77,7 +77,10 @@ return (
             {/* تصویر لوگوی فروشگاه */}
             <div className="home-hero-image">
                 <img
-                    src={`${import.meta.env.BASE_URL}images/logo.png`}
+                    src={
+                        import.meta.env.BASE_URL +
+                        "images/logo.png"
+                    }
                     alt="فروشگاه جزوات سقازاده"
                 />
             </div>
@@ -99,7 +102,7 @@ return (
                 <div className="teacher-list">
                     {teachers.map((teacher) =>
                     {
-                        // حذف / ابتدای مسیر برای سازگاری با GitHub Pages
+                        // حذف اسلش ابتدای مسیر برای سازگاری با GitHub Pages
                         const imagePath = teacher.image
                             ? teacher.image.replace(/^\//, "")
                             : "";
@@ -113,7 +116,10 @@ return (
                                 <div className="teacher-image">
                                     {imagePath && (
                                         <img
-                                            src={`${import.meta.env.BASE_URL}${imagePath}`}
+                                            src={
+                                                import.meta.env.BASE_URL +
+                                                imagePath
+                                            }
                                             alt={teacher.name}
                                         />
                                     )}

@@ -1,14 +1,38 @@
 [
     {
         "id": 1,
-        "name": "استاد حدادیان نژاد",
+        "name": "استاد هدا حدادیان نژادیوسفی",
         "description": "مدرس و تهیه‌کننده جزوات آموزشی",
-        "image": "/images/logo.png"
+        "image": "/images/hoda.png"
     },
     {
         "id": 2,
-        "name": "استاد یوسفی",
+        "name": "استاد هستی بهاری پور",
         "description": "مدرس و تهیه‌کننده جزوات آموزشی",
-        "image": "/images/logo.png"
+        "image": "/images/hasti.png"
+    },
+    {
+        "id": 3,
+        "name": "استاد حمید براتی",
+        "description": "مدرس و تهیه‌کننده جزوات آموزشی",
+        "image": "/images/barati.png"
+    },
+    {
+        "id": 4,
+        "name": "استاد علی براتی",
+        "description": "مدرس و تهیه‌کننده جزوات آموزشی",
+        "image": "/images/alibarati.png"
+    },
+    {
+        "id": 5,
+        "name": "استاد علی موجودی",
+        "description": "مدرس و تهیه‌کننده جزوات آموزشی",
+        "image": "/images/mojodi.png"
+    },
+    {
+        "id": 6,
+        "name": "استاد فراز فروتن",
+        "description": "مدرس و تهیه‌کننده جزوات آموزشی",
+        "image": "/images/frotan.png"
     }
 ]
