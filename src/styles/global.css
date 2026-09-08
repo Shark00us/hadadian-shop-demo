@@ -1122,7 +1122,15 @@ main
     font-size: 24px;
     font-weight: 800;
 }
+.product-details-cart-status
+{
+    margin-top: 8px;
 
+    color: var(--color-success);
+
+    font-size: 13px;
+    font-weight: 600;
+}
 /* =========================================================
    سبد خرید
    ========================================================= */
