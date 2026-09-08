@@ -11,51 +11,76 @@ import useCart from "../hooks/useCart.js";
 function Shop()
 {
     const [products, setProducts] = useState([]);
+    const [categories, setCategories] = useState([]);
     const [filteredProducts, setFilteredProducts] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(false);
 
     const { addToCart } = useCart();
 
-    // دریافت محصولات هنگام باز شدن صفحه فروشگاه
+    // دریافت محصولات و دسته‌بندی‌ها هنگام باز شدن صفحه فروشگاه
     useEffect(() =>
     {
-        async function loadProducts()
+        async function loadData()
         {
             setLoading(true);
             setError(false);
 
-            const data = await getProducts();
-
-            if (data.length === 0)
+            try
             {
+                // دریافت محصولات
+                const productsResponse = await getProducts();
+
+                // دریافت دسته‌بندی‌ها
+                const categoriesResponse = await fetch(
+                    `${import.meta.env.BASE_URL}data/categories.json`,
+                    {
+                        cache: "no-store"
+                    }
+                );
+
+                if (!categoriesResponse.ok)
+                {
+                    throw new Error(
+                        `خطا در دریافت دسته‌بندی‌ها: ${categoriesResponse.status}`
+                    );
+                }
+
+                const categoriesData = await categoriesResponse.json();
+
+                if (!Array.isArray(categoriesData))
+                {
+                    throw new Error(
+                        "ساختار فایل categories.json نامعتبر است."
+                    );
+                }
+
+                if (productsResponse.length === 0)
+                {
+                    setError(true);
+                }
+
+                setProducts(productsResponse);
+                setCategories(categoriesData);
+                setFilteredProducts(productsResponse);
+            }
+            catch (error)
+            {
+                console.error(
+                    "خطا در دریافت اطلاعات فروشگاه:",
+                    error
+                );
+
                 setError(true);
             }
-
-            setProducts(data);
-            setFilteredProducts(data);
-            setLoading(false);
+            finally
+            {
+                setLoading(false);
+            }
         }
 
-        loadProducts();
+        loadData();
     }, []);
-
-    // دریافت دسته‌بندی‌های موجود از روی محصولات
-    const categories = products.reduce(
-        (result, product) =>
-        {
-            if (
-                product.category &&
-                !result.includes(product.category)
-            )
-            {
-                result.push(product.category);
-            }
-
-            return result;
-        },
-        []
-    );
 
     // دریافت نتیجه فیلتر از کامپوننت ProductFilter
     const handleFilter = useCallback((filtered) =>
