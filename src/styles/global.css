@@ -38,7 +38,9 @@
 {
 position: fixed;
 inset: 0;
-z-index: 2000;
+z-index: 999;
+
+pointer-events: none;
 
 display: flex;
 align-items: center;
@@ -46,101 +48,68 @@ justify-content: center;
 
 padding: 20px;
 
-background: rgba(15, 23, 42, 0.72);
-backdrop-filter: blur(14px);
+}
+
+.trial-watermark
+{
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 10px;
+
+padding: 18px 26px;
+
+border: 1px solid rgba(37, 99, 235, 0.18);
+border-radius: 999px;
+
+background: rgba(255, 255, 255, 0.22);
+backdrop-filter: blur(6px);
+
+box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+
+opacity: 0.18;
 
 }
 
-.trial-modal
+.trial-watermark-badge
 {
-width: min(100%, 620px);
-padding: 44px 36px;
+padding: 5px 10px;
 
-border: 1px solid rgba(255, 255, 255, 0.18);
-border-radius: 28px;
+border-radius: 999px;
+background: var(--color-primary);
+color: #ffffff;
 
-background:
-    linear-gradient(
-        135deg,
-        rgba(255, 255, 255, 0.98),
-        rgba(239, 246, 255, 0.96)
-    );
+font-size: 12px;
+font-weight: 700;
+letter-spacing: 0.3px;
 
-box-shadow: 0 30px 90px rgba(15, 23, 42, 0.35);
+}
 
+.trial-watermark-text
+{
+color: var(--color-secondary);
+
+font-size: 14px;
+font-weight: 700;
 text-align: center;
 
 }
 
-.trial-modal-badge
-{
-display: inline-flex;
-margin-bottom: 14px;
-padding: 6px 12px;
-
-border-radius: 999px;
-background: var(--color-primary-light);
-color: var(--color-primary);
-
-font-size: 13px;
-font-weight: 700;
-
-}
-
-.trial-modal h2
-{
-margin-bottom: 12px;
-color: var(--color-secondary);
-font-size: 30px;
-line-height: 1.4;
-}
-
-.trial-modal p
-{
-margin-bottom: 18px;
-color: var(--color-text-light);
-font-size: 15px;
-line-height: 1.9;
-}
-
-.trial-modal-note
-{
-padding: 14px 16px;
-
-border-radius: 14px;
-background: rgba(37, 99, 235, 0.08);
-color: var(--color-text);
-
-font-size: 13px;
-line-height: 1.8;
-
-}
-
-.trial-modal-note strong
-{
-margin: 0 4px;
-color: var(--color-primary);
-}
 body:has(.trial-overlay)
 {
-    overflow: hidden;
+overflow-x: hidden;
 }
+
 @media (max-width: 700px)
 {
-.trial-modal
+.trial-watermark
 {
-padding: 30px 20px;
-border-radius: 22px;
+padding: 14px 18px;
 }
 
-.trial-modal h2
+.trial-watermark-text
 {
-    font-size: 24px;
-}
-
-.trial-modal p
-{
-    font-size: 14px;
+    font-size: 12px;
 }
 
 }
