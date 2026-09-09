@@ -78,7 +78,7 @@ function Layout({ children })
                         </div>
 
                         <h3>
-                            آرmin
+                            طلاکوب
                         </h3>
 
                         <p>
