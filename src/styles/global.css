@@ -60,14 +60,14 @@ gap: 10px;
 padding: 18px 26px;
 
 border: 1px solid rgba(37, 99, 235, 0.18);
-border-radius: 999px;
+border-radius: 450px;
 
 background: rgba(255, 255, 255, 0.22);
 backdrop-filter: blur(6px);
 
 box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
 
-opacity: 0.18;
+opacity: 0.4;
 
 }
 
@@ -75,11 +75,11 @@ opacity: 0.18;
 {
 padding: 5px 10px;
 
-border-radius: 999px;
+border-radius: 450px;
 background: var(--color-primary);
 color: #ffffff;
 
-font-size: 12px;
+font-size: 36px;
 font-weight: 700;
 letter-spacing: 0.3px;
 
@@ -89,7 +89,7 @@ letter-spacing: 0.3px;
 {
 color: var(--color-secondary);
 
-font-size: 14px;
+font-size: 24px;
 font-weight: 700;
 text-align: center;
 
@@ -109,7 +109,7 @@ padding: 14px 18px;
 
 .trial-watermark-text
 {
-    font-size: 12px;
+    font-size: 24px;
 }
 
 }
