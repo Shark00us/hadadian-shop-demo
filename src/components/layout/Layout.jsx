@@ -1,118 +1,52 @@
-import { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
-
 import Navbar from "./Navbar.jsx";
 import Footer from "./Footer.jsx";
 
+// یک فلگ ساده برای حالت آزمایشی
+// بعداً فقط این را false کنید یا کلاً حذف کنید
+const TRIAL_MODE = true;
+
 function Layout({ children })
 {
-    const location = useLocation();
+return (
+<div className="app">
+<Navbar />
 
-    const [showCreatorToast, setShowCreatorToast] = useState(false);
+        <main>
+            {children}
+        </main>
 
-    useEffect(() =>
-    {
-        // نمایش خودکار معرفی سازنده فقط در صفحه اصلی
-        if (location.pathname === "/")
-        {
-            const timer = setTimeout(() =>
-            {
-                setShowCreatorToast(true);
-            }, 700);
-
-            return () =>
-            {
-                clearTimeout(timer);
-            };
-        }
-
-        setShowCreatorToast(false);
-    }, [location.pathname]);
-
-    useEffect(() =>
-    {
-        // امکان باز کردن معرفی سازنده از فوتر
-        function handleOpenCreator()
-        {
-            setShowCreatorToast(true);
-        }
-
-        window.addEventListener(
-            "open-creator-toast",
-            handleOpenCreator
-        );
-
-        return () =>
-        {
-            window.removeEventListener(
-                "open-creator-toast",
-                handleOpenCreator
-            );
-        };
-    }, []);
-
-    return (
-        <div className="app">
-            <Navbar />
-
-            <main>
-                {children}
-            </main>
-
-            {/* پیام معرفی سازنده */}
-            {showCreatorToast && (
-                <div className="creator-toast">
-                    <div className="creator-toast-image">
-                        <img
-                            src={
-                                import.meta.env.BASE_URL +
-                                "images/logo.png"
-                            }
-                            alt="تصویر سازنده"
-                        />
+        {TRIAL_MODE && (
+            <div className="trial-overlay" role="dialog" aria-modal="true">
+                <section className="trial-modal">
+                    <div className="trial-modal-badge">
+                        نسخه آزمایشی
                     </div>
 
-                    <div className="creator-toast-content">
-                        <div className="creator-toast-title">
-                            ساخته شده توسط
-                        </div>
+                    <h2>
+                        دسترسی کامل پس از پرداخت فعال می‌شود
+                    </h2>
 
-                        <h3>
-                            طلاکوب
-                        </h3>
+                    <p>
+                        این سایت در حال حاضر در حالت آزمایشی است.
+                        برای دسترسی کامل و استفاده از همه بخش‌ها،
+                        پرداخت باید انجام شود.
+                    </p>
 
-                        <p>
-                            طراحی و توسعه فروشگاه جزوات سقازاده
-                        </p>
-
-                        <div className="creator-toast-links">
-                            <a
-                                href="https://github.com/Shark00us"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                GitHub
-                            </a>
-                        </div>
+                    <div className="trial-modal-note">
+                        برای غیرفعال کردن این لایه، مقدار
+                        <strong>TRIAL_MODE</strong>
+                        را به
+                        <strong>false</strong>
+                        تغییر دهید.
                     </div>
+                </section>
+            </div>
+        )}
 
-                    <button
-                        type="button"
-                        className="creator-toast-close"
-                        onClick={() =>
-                        {
-                            setShowCreatorToast(false);
-                        }}
-                        aria-label="بستن"
-                    >
-                        ×
-                    </button>
-                </div>
-            )}
+        <Footer />
+    </div>
+);
 
-            <Footer />
-        </div>
-    );
 }
 
 export default Layout;
